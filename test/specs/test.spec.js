@@ -11,7 +11,7 @@ describe("Test suite", () => {
         browser.pause(5000);
         await $("#select2-postform-expiration-container.select2-selection__rendered").click();
         browser.pause(5000);
-        await $('//select[@id="postform-expiration"]/option[3]').click();
+        await $('//*[@id="select2-postform-expiration-container"]').click();
         browser.pause(5000);
         await $("#postform-name.form-control").setValue("helloweb");
     })
