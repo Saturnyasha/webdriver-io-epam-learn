@@ -8,8 +8,11 @@ describe("Test suite", () => {
     it("Second test", async()=>{
         await $("//textarea").click();
         await $("//textarea").addValue("Hello from WebDriver");
+        browser.pause(5000);
+        await $("#select2-postform-expiration-container.select2-selection__rendered").click();
+        browser.pause(5000);
+        await $('//select[@id="postform-expiration"]/option[3]').click();
+        browser.pause(5000);
         await $("#postform-name.form-control").setValue("helloweb");
-        // await $("#select2-postform-expiration-container.select2-selection__rendered").click();
-        // await $("#select2-postform-expiration-result-7wqf-10M.select2-results__option.select2-results__option--highlighted").setValue("10 Minutes");
     })
 });
